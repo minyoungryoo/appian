@@ -1,0 +1,28 @@
+/*
+Data Store: TB_distributionDetailsDataStore
+Created: 2016-09-01T17:55:40.041Z
+By: Administrator
+Appian Version: 16.2.0.0
+Target Database: MySQL 5.7.14
+Database Driver: MySQL Connector Java mysql-connector-java-5.1.38 ( Revision: fe541c166cec739c74cc727c5da96c1028b4834a )
+*/
+
+/* UPDATE DDL */
+/* DROP AND CREATE DDL */
+/* WARNING: The DDL commented out below will drop and re-create all tables. 
+
+    drop table if exists `tbdistributiondetails`;
+
+    create table `TBDistributionDetails` (
+        `id` integer not null auto_increment,
+        `LOCALE` varchar(10),
+        `OUTPUT_FORMAT` varchar(10),
+        `SAVE_OUTPUT` varchar(10),
+        `DEL_CHANNEL` varchar(10),
+        `SUBJECT_PREFIX` varchar(250),
+        `SUBJECT_SUFFIX_NO_TRADING` varchar(250),
+        `FILENAME_PREFIX` varchar(250),
+        primary key (`id`)
+    ) ENGINE=InnoDB;
+
+*/

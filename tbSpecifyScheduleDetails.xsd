@@ -1,0 +1,104 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:com:appian:types:TB" targetNamespace="urn:com:appian:types:TB">
+  <xsd:complexType name="TBSpecifyScheduleDetails">
+    <xsd:annotation>
+      <xsd:documentation><![CDATA[This is our TB specify schedule details table]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="id" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Id 
+            @GeneratedValue
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ScheduleTime" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(4)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ScheduleTimezone" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(5) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ScheduleDays" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(7)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="HeaderFlag" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(1) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FooterFlag" nillable="true" type="xsd:string" >
+      <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(1) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="USEtimezoneFlag" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(1) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ActiveStatus" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(1) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PrioritySequence" nillable="true" type="xsd:integer" />
+      <xsd:element name="UpdateDT" nillable="true" type="xsd:date" />
+      <xsd:element name="UpdateUser" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(10) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FilenameSuffixNoTrading" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(250)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TemplateNameNoTrading" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(250) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MonthlyFlag" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(1) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MonthlyScheduleDays" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(2)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+

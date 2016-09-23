@@ -1,0 +1,60 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:com:appian:types:TB" targetNamespace="urn:com:appian:types:TB">
+  <xsd:complexType name="TBDefineSchedule">
+    <xsd:annotation>
+      <xsd:documentation><![CDATA[This is our TB define schedule table]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="id" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Id 
+            @GeneratedValue
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="GroupAddressFrom" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(250)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="GroupAddressReply" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(250)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="GroupAddressCC" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(2000)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="GroupAddressBCC" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(2000)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MessageContent" nillable="true" type="xsd:string" >
+      <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(3000)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MessageContentNoTrading" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(3000)")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+

@@ -1,0 +1,61 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:com:appian:types:TB" targetNamespace="urn:com:appian:types:TB">
+  <xsd:complexType name="TBDistributionDetails">
+    <xsd:annotation>
+      <xsd:documentation><![CDATA[This is our TB distribution details table]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="id" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Id 
+            @GeneratedValue
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Locale" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(10) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="OutputFormat" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(10) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SaveOutput" nillable="true" type="xsd:boolean" />
+      <xsd:element name="DelChannel" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(10) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SubjectPrefix" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(250) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SubjectSuffixNoTrading" nillable="true" type="xsd:string" >
+      <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(250) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FilenamePrefix" nillable="true" type="xsd:string" >
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(columnDefinition="VARCHAR(250) NOT NULL")
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+
